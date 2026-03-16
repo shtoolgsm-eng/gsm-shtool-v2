@@ -1,0 +1,18 @@
+gsm-shtool-v2/
+│
+├── index.html
+├── login.html
+├── register.html
+├── dashboard.html
+├── admin/panel.html
+│
+├── css/style.css
+├── js/main.js
+├── js/api.js
+│
+├── api/login.php
+├── api/register.php
+├── api/order.php
+├── api/services.php
+├── api/balance.php
+└── database/gsm.sql
