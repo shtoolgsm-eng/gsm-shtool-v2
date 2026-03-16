@@ -1,0 +1,27 @@
+CREATE TABLE users(
+id INT AUTO_INCREMENT,
+username VARCHAR(50),
+password VARCHAR(255),
+balance FLOAT DEFAULT 0,
+api_key VARCHAR(100),
+PRIMARY KEY(id)
+);
+
+CREATE TABLE services(
+id INT AUTO_INCREMENT,
+name VARCHAR(100),
+price FLOAT,
+PRIMARY KEY(id)
+);
+
+CREATE TABLE orders(
+id INT AUTO_INCREMENT,
+user VARCHAR(50),
+service VARCHAR(100),
+imei VARCHAR(50),
+device VARCHAR(50),
+price FLOAT,
+status VARCHAR(50),
+date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY(id)
+);
