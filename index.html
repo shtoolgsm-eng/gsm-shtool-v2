@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GSM SHTOOL PRO</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+<h1>GSM SHTOOL SERVER</h1>
+
+<select id="service">
+<option value="icloud">Official iCloud Unlock - 80$</option>
+<option value="frp">Samsung FRP - 5$</option>
+<option value="unlock">Samsung Unlock - 10$</option>
+</select>
+
+<select id="device">
+<option>iPhone</option>
+<option>iPad</option>
+<option>Apple Watch</option>
+</select>
+
+<input type="text" placeholder="Enter IMEI / Serial" id="imei">
+
+<select id="currency">
+<option>USD</option>
+<option>SAR</option>
+<option>USDT</option>
+</select>
+
+<button onclick="submitOrder()">Submit Order</button>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/api.js"></script>
+</body>
+</html>
