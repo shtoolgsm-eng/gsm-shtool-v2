@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>لوحة المدير - GSM T SHTOOL V4 PRO</title>
+<link rel="stylesheet" href="../css/style.css">
+<script>
+function editService(name){ alert('تعديل ' + name); }
+function deleteService(name){ alert('حذف ' + name); }
+</script>
+</head>
+<body>
+<h1>لوحة المدير</h1>
+<p>إدارة المستخدمين والخدمات:</p>
+
+<h2>خدمات GSM الحالية:</h2>
+<ul>
+  <li>FRP Tools <button onclick="editService('FRP Tools')">تعديل</button> <button onclick="deleteService('FRP Tools')">حذف</button></li>
+  <li>Flash Tools <button onclick="editService('Flash Tools')">تعديل</button> <button onclick="deleteService('Flash Tools')">حذف</button></li>
+  <li>IMEI Repair <button onclick="editService('IMEI Repair')">تعديل</button> <button onclick="deleteService('IMEI Repair')">حذف</button></li>
+  <li>Firmware Downloads <button onclick="editService('Firmware Downloads')">تعديل</button> <button onclick="deleteService('Firmware Downloads')">حذف</button></li>
+  <li>Unlock Services <button onclick="editService('Unlock Services')">تعديل</button> <button onclick="deleteService('Unlock Services')">حذف</button></li>
+</ul>
+
+<a href="../index.html">الصفحة الرئيسية</a>
+</body>
+</html>
