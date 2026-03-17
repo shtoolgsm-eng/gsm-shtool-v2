@@ -1,0 +1,31 @@
+body {
+  background:#0a0a0a;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+}
+a { color:#00eaff; }
+
+.services {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:20px;
+}
+
+.service-card {
+  background:#111;
+  color:#00eaff;
+  padding:20px;
+  margin:10px;
+  min-width:150px;
+  box-shadow:0 0 15px #00eaff;
+  border-radius:8px;
+  cursor:pointer;
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow:0 0 25px #00ffff;
+}
