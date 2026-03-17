@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>لوحة المستخدم - GSM T SHTOOL V4 PRO</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/lang.js"></script>
+<script>
+function openService(name){ alert(name + ' تم فتح الخدمة!'); }
+</script>
+</head>
+<body>
+<h1>لوحة المستخدم</h1>
+<p>أدوات وخدمات GSM المتاحة لك:</p>
+
+<div class="services">
+  <div class="service-card" onclick="openService('FRP Tools')">FRP Tools</div>
+  <div class="service-card" onclick="openService('Flash Tools')">Flash Tools</div>
+  <div class="service-card" onclick="openService('IMEI Repair')">IMEI Repair</div>
+  <div class="service-card" onclick="openService('Firmware Downloads')">Firmware Downloads</div>
+  <div class="service-card" onclick="openService('Unlock Services')">Unlock Services</div>
+</div>
+
+<br><br>
+<a href="store.html">متجر الاشتراكات</a> | <a href="index.html">الصفحة الرئيسية</a>
+</body>
+</html>
