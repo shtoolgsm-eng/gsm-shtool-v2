@@ -29,3 +29,31 @@ a { color:#00eaff; }
   transform: scale(1.05);
   box-shadow:0 0 25px #00ffff;
 }
+/* الخلفيات المخصصة للموقع */
+body {
+    background: url('../images/gradient_code_bg.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* القسم الخاص بالشعار في الهيدر */
+.header-logo {
+    width: 200px;
+    height: auto;
+    background: url('../images/logo.png') no-repeat center center;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+/* خلفية كود متوهج لبعض الأقسام */
+.code-section {
+    background: url('../images/code_bg.png') no-repeat center center;
+    background-size: cover;
+    padding: 40px 0;
+}
+
+/* خلفية دائرة كهربائية للأقسام التقنية */
+.circuit-section {
+    background: url('../images/circuit_bg.png') no-repeat center center;
+    background-size: cover;
+    padding: 40px 0;
+}
