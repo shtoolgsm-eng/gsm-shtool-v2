@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>iPhone Services</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white p-5">
+
+<h1 class="text-2xl mb-5">iPhone Unlock</h1>
+
+<select id="model" class="text-black p-2 w-full mb-3" onchange="setPrice()">
+<option value="">Select Model</option>
+<option value="iPhone 13 Pro|135">iPhone 13 Pro - $135</option>
+<option value="iPhone 14 Pro|165">iPhone 14 Pro - $165</option>
+<option value="iPhone 15 Pro Max|190">iPhone 15 Pro Max - $190</option>
+</select>
+
+<input id="imei" placeholder="Enter IMEI" class="text-black p-2 w-full mb-3">
+
+<div id="price" class="mb-3">Price: $0</div>
+
+<button onclick="pay()" class="bg-green-600 p-3 w-full rounded">
+I Paid
+</button>
+
+<script>
+
+let selected = "";
+let price = 0;
+
+function setPrice(){
+let val = document.getElementById("model").value;
+if(!val) return;
+
+let parts = val.split("|");
+selected = parts[0];
+price = parts[1];
+
+document.getElementById("price").innerText = "Price: $" + price;
+}
+
+function pay(){
+let imei = document.getElementById("imei").value;
+if(!imei){ alert("Enter IMEI"); return; }
+
+let order = "IRV-" + Math.floor(Math.random()*99999);
+
+let msg = `Hello, I paid
+
+Order ID: ${order}
+Service: ${selected}
+IMEI: ${imei}
+TXID: `;
+
+let url = "https://t.me/GSMSHTOOL?text=" + encodeURIComponent(msg);
+window.open(url, "_blank");
+}
+
+</script>
+
+</body>
+</html>
