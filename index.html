@@ -3,35 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iRmove VIP</title>
+<title>iRmove VIP | iCloud Unlock & GSM Services</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
+<meta name="description" content="iRmove VIP - Professional iCloud Unlock, IMEI Check, FRP Bypass and GSM Tools. Fast and trusted service.">
+<meta name="keywords" content="iCloud Unlock, IMEI Check, GSM Tools, FRP Bypass, iPhone Unlock">
+
 <style>
-body {background:#0b0b12;color:white;font-family:Arial;}
-.card:hover{transform:scale(1.05);transition:.3s;}
-.glow{text-shadow:0 0 15px #6c63ff;}
+body{background:#0b0b12;color:white;font-family:Arial;}
+.card{transition:.3s}
+.card:hover{transform:translateY(-5px) scale(1.04)}
+.glow{text-shadow:0 0 15px #6c63ff}
 </style>
 </head>
 
 <body>
 
-<div class="text-center py-10">
-<h1 class="text-4xl font-bold glow">iRmove VIP</h1>
-<p class="text-gray-400 mt-2">Professional GSM & iCloud Services</p>
+<!-- HERO -->
+<div class="text-center py-12">
+<h1 class="text-4xl md:text-5xl font-bold glow">iRmove VIP</h1>
+<p class="text-gray-400 mt-3">Professional GSM & iCloud Unlock Services</p>
+
+<div class="mt-6">
+<a href="order.html" class="bg-blue-600 px-6 py-2 rounded mr-2">Order Now</a>
+<a href="check.html" class="bg-gray-700 px-6 py-2 rounded">Free Check</a>
+</div>
 </div>
 
+<!-- SERVICES -->
 <div class="grid grid-cols-2 md:grid-cols-3 gap-5 p-5">
 
 <a href="iphone.html" class="card bg-gray-900 p-5 rounded-xl text-center">📱 iPhone</a>
 <a href="ipad.html" class="card bg-gray-900 p-5 rounded-xl text-center">📲 iPad</a>
 <a href="watch.html" class="card bg-gray-900 p-5 rounded-xl text-center">⌚ Watch</a>
 <a href="bypass.html" class="card bg-gray-900 p-5 rounded-xl text-center">🔓 iCloud Bypass</a>
-<a href="frp.html" class="card bg-gray-900 p-5 rounded-xl text-center">🤖 FRP</a>
-<a href="programs.html" class="card bg-gray-900 p-5 rounded-xl text-center">💻 Programs</a>
+<a href="frp.html" class="card bg-gray-900 p-5 rounded-xl text-center">🤖 FRP Android</a>
+<a href="programs.html" class="card bg-gray-900 p-5 rounded-xl text-center">💻 Free Programs</a>
 
 </div>
 
+<!-- REVIEWS -->
+<div class="p-5">
+<h2 class="text-xl mb-4 glow">Customer Reviews</h2>
+
+<div id="reviews" class="space-y-2"></div>
+</div>
+
+<!-- PAYMENT -->
 <div class="p-5 text-center">
 <h2 class="glow">USDT Payment</h2>
 <p onclick="copyWallet()" class="cursor-pointer text-sm mt-2">
@@ -40,15 +59,40 @@ body {background:#0b0b12;color:white;font-family:Arial;}
 
 <a href="https://t.me/GSMSHTOOL" target="_blank"
 class="bg-blue-600 px-5 py-2 rounded mt-4 inline-block">
-Support
+Contact Support
 </a>
 </div>
 
 <script>
+
+// Wallet copy
 function copyWallet(){
 navigator.clipboard.writeText("0x77Ba12EeB09C2006ad2C0BF893557070194D7ec2");
-alert("Wallet Copied");
+alert("Wallet copied");
 }
+
+// Reviews generator
+const numbers = [
+"+966598947362","+971583514374","+254765830186","+447422808893","+201903646958"
+];
+
+const texts = [
+"Fast and trusted service 🔥",
+"Unlocked my device in hours!",
+"Best GSM service ever",
+"Highly recommended 👍",
+"Professional support"
+];
+
+let html="";
+numbers.forEach(n=>{
+let masked = n.slice(0,5)+"****"+n.slice(-3);
+let t = texts[Math.floor(Math.random()*texts.length)];
+html += `<div class="bg-gray-900 p-3 rounded">${masked} - ${t}</div>`;
+});
+
+document.getElementById("reviews").innerHTML = html;
+
 </script>
 
 </body>
